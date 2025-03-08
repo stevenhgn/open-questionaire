@@ -95,11 +95,17 @@
             <a href="{{ route('dashboard') }}" class="ml-1 flex items-center space-x-2" wire:navigate>
                 <x-app-logo />
             </a>
+            <a href="{{ route('questionaires') }}" class="ml-1 flex items-center space-x-2" wire:navigate>
+                <x-app-logo />
+            </a>
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')">
                     <flux:navlist.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
+                    </flux:navlist.item>
+                    <flux:navlist.item icon="layout-grid" :href="route('questionaires')" :current="request()->routeIs('questionaires')" wire:navigate>
+                    {{ __('Questionaires') }}
                     </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
